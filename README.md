@@ -31,6 +31,7 @@ When analyzing network traffic containing video streams, tools like Wireshark al
 ## ⚙️ Usage
 
 ### 1. Prepare the Input Data
+
 First, export the packet payload from your capture file using `tshark`. Ensure the output contains only the hexadecimal data string.
 
 ```bash
@@ -48,6 +49,21 @@ cd /d %~dp0
 "%TSHARK_PATH%\tshark.exe" -r "%CAPTURE_FILE%" -Y "%FILTER%" -T fields -e %DATA_FIELD% > "%TXT_FILE%"
 ```
 Note: The script expects the input file to be named tshark_output.txt and placed in the same directory.
+
+### 🧪 Quick Start with Sample Data (Optional)
+If you don't have your own packet dump yet, you can use the provided sample file (`sample_input.txt`) to test the script.
+
+> **⚠️ Note**: The original raw dump was over **7GB**. This sample (`sample_input.txt`) is a trimmed version (approx. 20MB) containing only the beginning of the stream. Therefore, **the reconstructed video will only play for a few seconds.**
+
+To use the sample:
+1. Open `main.py`.
+2. Modify the `INPUT_FILE` variable as follows:
+
+```python
+# --- Configuration ---
+# INPUT_FILE = "tshark_output.txt"  <-- Comment out the original
+INPUT_FILE = "sample_input.txt"     # <-- Change to sample file
+```
 
 ### 2. Run the Script
 Execute the Python script to process the text file and generate the video file.
