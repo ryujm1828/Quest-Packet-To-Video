@@ -24,8 +24,9 @@ When analyzing network traffic containing video streams, tools like Wireshark al
 ## 📋 Prerequisites
 
 - **Python 3.x**
-- **Wireshark / Tshark** (to generate the input dump file)
-- A media player that supports raw H.264 streams (e.g., VLC Media Player, `ffplay`)
+- **Wireshark / USBPcap**(To capture USB packets)
+- **Tshark**(to generate the input dump file)
+- A media player that supports raw H.264 streams (e.g., VLC Media Player, ffplay)
 
 ## ⚙️ Usage
 
