@@ -62,7 +62,7 @@ To use the sample:
 ```python
 # --- Configuration ---
 # INPUT_FILE = "tshark_output.txt"  <-- Comment out the original
-INPUT_FILE = "sample_input.txt"     # <-- Change to sample file
+INPUT_FILE = "sample.txt"     # <-- Change to sample file
 ```
 
 ### 2. Run the Script
